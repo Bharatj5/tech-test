@@ -13,7 +13,7 @@ All Maven plugins and dependencies are available from [Maven Central](https://se
 
 ### Running
 
-### SpringBoot Style
+#### Spring Boot Style
 
 Typical java jar created
 
@@ -73,7 +73,7 @@ Expected response:
 }
 ``` 
 
-####Note
+### Notes
 * API-key should be come from environment variable (or secure vault config) but hardcoded in the application
 * Included cucumber integration test rather Spring Boot IT
 * Standard retry and circuit breaker implementation covered and working when tested with hack. Integration test is not covered.
