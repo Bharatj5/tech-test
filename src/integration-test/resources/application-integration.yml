@@ -1,0 +1,5 @@
+kraken:
+  api:
+    key: it-6e0456f1-ff06-4a42-a13f-2e36bedf80e2
+    baseUrl: http://localhost:${wiremock.server.port}/v1
+    outageUrl: ${kraken.api.baseUrl}/outages

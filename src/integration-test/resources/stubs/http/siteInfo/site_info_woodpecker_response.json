@@ -1,0 +1,20 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/site-info/woodpecker",
+    "headers": {
+      "x-api-key" : {
+        "contains": "it-6e0456f1-ff06-4a42-a13f-2e36bedf80e2"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "jsonBody": {
+      "message": "Record not found"
+    },
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}

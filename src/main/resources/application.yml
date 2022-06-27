@@ -1,0 +1,45 @@
+kraken:
+  api:
+    key: EltgJ5G8m44IzwE6UN2Y4B4NjPW77Zk6FJK3lL23 #Should come from environment variable (or secure vault config)
+    baseUrl: https://api.krakenflex.systems/interview-tests-mock-api/v1
+    outageUrl: ${kraken.api.baseUrl}/outages
+    siteInfoUrl: ${kraken.api.baseUrl}/site-info/{siteId}
+    siteOutageUrl: ${kraken.api.baseUrl}/site-outages/{siteId}
+
+microservice:
+  connectionTimeOut: 60000
+  readTimeOut: 60000
+  httpMaxConnection: 10
+
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
+  endpoint:
+    circuitbreakers:
+      enabled: true
+    health:
+      show-details: always
+
+resilience4j.circuitbreaker:
+  instances:
+    siteOutage:
+      registerHealthIndicator: true
+      slidingWindowSize: 7
+
+resilience4j.retry:
+  instances:
+    siteOutage:
+      maxAttempts: 3
+      waitDuration: 5s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      retryExceptions:
+        - org.springframework.web.client.HttpServerErrorException
+        - java.io.IOException
+        - com.kraken.uk.exception.ApiCommunicationException
+

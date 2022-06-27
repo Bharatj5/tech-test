@@ -1,0 +1,55 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/site-info/site-without-outages",
+    "headers": {
+      "x-api-key" : {
+        "contains": "it-6e0456f1-ff06-4a42-a13f-2e36bedf80e2"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": {
+      "id": "site-without-outages",
+      "name": "Site without outages",
+      "devices": [
+        {
+          "id": "311183e7-fb90-436b-9951-63392b36bdd2",
+          "name": "Battery 1"
+        },
+        {
+          "id": "76b5c819-6a6c-4978-8c51-a2d810bb9318",
+          "name": "Battery 2"
+        },
+        {
+          "id": "90656668-571e-49fa-be2e-099c67d136ab",
+          "name": "Battery 3"
+        },
+        {
+          "id": "3ed11921-1c5b-40f4-be66-adb4e2f016bd",
+          "name": "Battery 4"
+        },
+        {
+          "id": "b79fe094-087b-4b1e-ae20-ac4bf7fa429b",
+          "name": "Battery 5"
+        },
+        {
+          "id": "1e4d59ba-43c7-4451-a8ac-ca628bcde417",
+          "name": "Battery 6"
+        },
+        {
+          "id": "c0f6e664-f00e-4621-9ca4-5ec588aadeaf",
+          "name": "Battery 7"
+        },
+        {
+          "id": "v5e96db4-bba2-4035-8f43-df2cbd3da859",
+          "name": "Battery 8"
+        }
+      ]
+    },
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}
