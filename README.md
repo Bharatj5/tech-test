@@ -32,7 +32,7 @@ Then run the below command
 docker run -d -p 8080:8080 -it tech-test:latest
 ```
 
-#### Test the Endpoint
+### Test the Endpoint
 This application (client) has exposed the `/report-outages/{siteId}` REST endpoint that accepts SiteID and post outages based on the requirement.
 
 Endpoint should honor the below requirements:
